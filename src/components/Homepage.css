@@ -1,0 +1,103 @@
+/* Container for the page */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/eye.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    color: #e0e0e0; /* Light text color for contrast */
+    position: relative; /* Establish a positioning context */
+}
+
+/* Navigation styling */
+nav {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width of the viewport */
+    background-color: rgba(31, 31, 31, 0.8); /* Darker background color with slight transparency for the navbar */
+    padding: 5px 10px; /* Adjust padding to decrease height */
+    height: 50px; /* Decreased height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out the items */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Logo styling */
+nav img {
+    height: 100%; /* Ensure logo height matches the navbar height */
+    max-height: 100%; /* Prevent logo from exceeding navbar height */
+}
+
+/* Navigation links container styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between links */
+}
+
+/* Navigation link styling */
+.nav-link {
+    text-decoration: none;
+    color: #00bcd4; /* Cyan color for links */
+    font-size: 16px; /* Adjust font size if needed */
+    padding: 6px 10px; /* Adjust padding to fit new height */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+    color: #e0e0e0; /* Change text color on hover */
+}
+
+/* Remove the underline effect */
+.nav-link::before {
+    content: none; /* Remove the pseudo-element */
+}
+
+/* Adjust content below navbar */
+.content {
+    margin-top: 60px; /* Adjust space for the fixed navbar */
+    padding: 20px; /* Add padding for content */
+}
+
+/* Ensure the navbar links are aligned properly */
+.nav-link {
+    margin: 0 10px; /* Add horizontal margin between links */
+}
+
+/* Positioning specific link to the left */
+.nav-links .login-link {
+    margin-left: auto; /* Push the Login link to the left */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .homepage-container {
+        background-size: contain; /* Change to contain on smaller screens */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links on smaller screens */
+        align-items: flex-start; /* Align to the left */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+
+    .homepage-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

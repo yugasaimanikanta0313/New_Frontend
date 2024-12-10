@@ -1,0 +1,45 @@
+/* Style for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navbar-title {
+  font-size: 1.8rem;
+  color: #00f5ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.menu-icon {
+  color: #00f5ff;
+  margin-right: 20px; /* Add right margin here */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.menu-link:hover {
+  color: #00f5ff;
+  font-weight: bold;
+}
+
+/* Style for menu items */
+.MuiMenu-paper {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.MuiMenuItem-root {
+  transition: background-color 0.2s;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: rgba(0, 245, 255, 0.2);
+}
